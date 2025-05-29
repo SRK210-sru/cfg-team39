@@ -7,16 +7,18 @@
   "engines": {
     "node": "14.x"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seeder.js",
-    "data:destroy": "node backend/seeder.js -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
-  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "node backend/server.js",
+  "server": "nodemon backend/server.js",
+  "client": "npm start --prefix frontend",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "data:import": "node backend/seeder.js",
+  "data:destroy": "node backend/seeder.js -d",
+  "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+  "build": "npm install --prefix frontend && npm run build --prefix frontend"
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rajatm544/MERN-Ecommerce.git"
